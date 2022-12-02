@@ -1,0 +1,32 @@
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(6,1fr);
+    gap: 20px;
+}
+.card{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #f6b228;
+	border-radius: 5px;
+    position: relative;
+}
+.card .card-front{
+    transform: rotateY(90deg);
+    transition: transform 0.15s linear;
+}
+.card .card-back{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: transform 0.15s linear 0.15s;
+}
+.flip .card-front{
+    transform: rotateY(0deg);
+    transition-delay: 0.15s;
+}
+.flip .card-back{
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
